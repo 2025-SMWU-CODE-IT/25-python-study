@@ -1,4 +1,4 @@
-#3주차 과제 
+#2주차 과제 
 
 #문제 번호: 2557 "Hello World"
 print("Hello World!")
