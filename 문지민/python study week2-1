@@ -1,0 +1,89 @@
+# 2주차 과제
+
+# 문제 번호: 2557 Hello World 출력
+print('Hello World!')
+
+# 문제 번호: 1000 A+B
+a, b = input("0에서 10 사이의 정수를 입력하세요.").split()
+A = int(a)
+B = int(b)
+print(A+B)
+
+# 문제 번호: 1001 A-B
+a, b = input("0에서 10 사이의 정수를 입력하세요.").split()
+A = int(a)
+B = int(b)
+print(A-B)
+
+# 문제 번호: 10998 AxB
+a, b = input("0에서 10 사이의 정수를 입력하세요.").split()
+A = int(a)
+B = int(b)
+print(A*B)
+
+# 문제 번호: 1008 A/B
+a, b = input("0에서 10 사이의 정수를 입력하세요.").split()
+A = int(a)
+B = int(b)
+print(A/B)
+
+# 문제 번호: 10869 사칙연산
+a, b = input("0에서 10000 사이의 자연수를 입력하세요.").split()
+A = int(a)
+B = int(b)
+print(A+B)
+print(A-B)
+print(A*B)
+print(A/B)
+print(A%B)
+
+# 문제 번호: 10926 ??!
+id = "joonas"
+id = input("아이디를 입력하세요.")
+print(id+"??!")
+
+# 문제 번호: 18108 1998년생인 내가 태국에서는 2541년생?!
+y = int(input("불기 연도를 입력하세요."))
+x = y-543
+print(x)
+
+# 문제 번호: 10430 나머지
+a, b, c = input("2에서 10000 사이의 값을 입력하세요.").split(" ", 3)
+A = int(a)
+B = int(b)
+C = int(c)
+print((A+B)%C)
+print(((A%C) + (B%C))%C)
+print((A*B)%C)
+print(((A%C)*(B%C))%C)
+
+# 문제 번호: 2588 곱셈
+x = input("세 자리수 자연수 입력")
+y = input("세 자리수 자연수 입력")
+a = int(x)*int(y[2])
+print(a)
+b = int(x)*int(y[1])
+print(b)
+c = int(x)*int(y[0])
+print(c)
+print(c*100+b*10+a)
+
+# 문제 번호: 11382 꼬마 정민
+a, b, c = input("1과 10^12 사이의 수를 입력하세요.").split(" ", 3)
+A = int(a)
+B = int(b)
+C = int(c)
+print(A+B+C)
+
+# 문제 번호: 10171 고양이
+print("\\    /\\")
+print(" )  ( ')")
+print("(  /  )")
+print(" \\(__)|")
+
+# 문제 번호: 10172 개
+print('|\_/|')
+print('|q p|   /}')
+print('( 0 )"""\\')
+print('|"^"`    |')
+print('||_/=\\\__|')
