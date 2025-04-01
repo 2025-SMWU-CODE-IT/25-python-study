@@ -39,7 +39,8 @@ print(a%b)
 print(input()+"??!")
 
 #18108
-print(int(input())-int(543))
+a = int(input())
+print(a-543)
 
 #10430
 a,b,c = input().split()
