@@ -58,3 +58,4 @@ b = len(a)//2
 
 for i in range(b):
     if a[i] == a[len(a)-1]:
+        
