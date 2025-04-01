@@ -16,8 +16,6 @@ A = input()
 print(ord(A))
 
 #2908
-sang = int(input("상근아~ : "))
-gun = sang[2] + sang[1] + sang[0]
 
 #1330
 
