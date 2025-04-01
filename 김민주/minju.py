@@ -1,3 +1,2 @@
-#2743
-S1 = input("알파벳으로만 이루어진 단어를 입력해주세요 : ")
-print(len(S1))
+sang = input("상근아~ : ")
+gun = sang[2] + sang[1] + sang[0]
