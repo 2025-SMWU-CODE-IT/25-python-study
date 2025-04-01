@@ -6,3 +6,7 @@ S = input("단어길이 최대 100 : ")
 i = int(input("위치 : "))
 
 print(S[i-1])
+
+#2743
+S1 = input("알파벳으로만 이루어진 단어를 입력해주세요 : ")
+print(len(S1))
