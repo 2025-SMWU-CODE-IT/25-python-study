@@ -16,6 +16,11 @@ A = input()
 print(ord(A))
 
 #2908
+sang, geun = input("상근 : ").split()
+if sang >= geun :
+    print(sang[2]+sang[1]+sang[0])
+else :
+    print(geun[2]+geun[1]+geun[0])
 
 #1330
 
@@ -27,4 +32,14 @@ print(ord(A))
 
 
 #10988
+B = input()
+i = 0
 
+if B[0+i] == B[-1-i]:
+    while True:
+        i+=1
+        print(1)
+        if i == i:
+            break  
+else:
+    print(0)
