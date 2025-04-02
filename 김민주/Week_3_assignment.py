@@ -33,10 +33,30 @@ else :
     print("<")
 
 #9498
-
+T = int(input())
+if 100>=T>=90 :
+    print("A")
+elif 90>T>=80 :
+    print("B")
+elif 80>T>=70 :
+    print("C")
+elif 70>T>=60 :
+    print("D")
+else:
+    print("F")
 
 #2884
+H = int(input("시간 : "))
+M = int(input("분 : "))
+while H > 24 or M > 60:
+    print("다시 설정 해주세요")
+    continue
+alarm = H*60 + M - 45
+H = alarm // 60
+M = str(alarm - H*60)
+H = str(H)
 
+print(H + ":" + M)
 
 #10988
 B = input()
