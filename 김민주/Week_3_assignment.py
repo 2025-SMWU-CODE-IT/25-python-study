@@ -23,7 +23,14 @@ else :
     print(geun[2]+geun[1]+geun[0])
 
 #1330
-
+A = int(input("A<=10,000인 수를 입력하세요 : "))
+B = int(input("B<=10,000인 수를 입력하세요 : "))
+if A>B :
+    print(">")
+elif A==B : 
+    print("==")
+else : 
+    print("<")
 
 #9498
 
