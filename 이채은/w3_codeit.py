@@ -14,8 +14,8 @@ print(ord(a))
 #2908 상수
 a = int(input())
 b = int(input())
-c = (a%10)*100+((a%100)//10)*10+(a//100)
-d = (b%10)*100+((b%100)//10)*10+(b//100)
+c = int(a[2]+a[1]+a[0])
+d = int(b[2]+b[1]+b[0])
 if c > d :
     print(c)
 else :
@@ -26,7 +26,7 @@ a = int(input())
 b = int(input())
 if a > b:
     print('>')
-elif a = b:
+elif a == b:
     print('=')
 else:
     print('<')
@@ -50,7 +50,7 @@ b = input('분')
 if b >= 45:
     print(a,'시',b-45,'분')
 else:
-    print(a-1'시',b+60-45,'분')
+    print(a-1'시',b+15,'분')
 
 #10988 팰린드롬인지 확인하기
 a = input()
