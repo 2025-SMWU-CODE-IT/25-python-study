@@ -8,7 +8,7 @@ i = int(input("위치 : "))
 print(S[i-1])
 
 #2743
-S1 = input("알파벳으로만 이루어진 단어를 입력해주세요 : ")
+S1 = input()
 print(len(S1))
 
 #11654
@@ -23,11 +23,10 @@ else :
     print(geun[2]+geun[1]+geun[0])
 
 #1330
-A = int(input("A<=10,000인 수를 입력하세요 : "))
-B = int(input("B<=10,000인 수를 입력하세요 : "))
-if A>B :
+A, B = input().split()
+if int(A) > int(B) :
     print(">")
-elif A==B : 
+elif int (A) == int(B) : 
     print("==")
 else : 
     print("<")

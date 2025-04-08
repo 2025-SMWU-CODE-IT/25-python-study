@@ -1,14 +1,8 @@
-#2884
-H = int(input("시간 : "))
-M = int(input("분 : "))
-while H > 24 or M > 60: 
-    print("다시 설정 해주세요")
-    H = int(input("시간 : "))
-    M = int(input("분 : "))
-    continue
-alarm = H*60 + M - 45 #시간도 분으로 바꾼 후, 45분 빼줌.
-H = alarm // 60
-M = str(alarm - H*60) #아래의 프린트 문에서 :를 출력하기 위해 자료형을 문자열로 변환해줌.
-H = str(H)
+B = input()
+i = 0
 
-print(H + ":" + M)
+if B[0+i] == B[-1-i]: #맨 앞, 맨 뒤부터 하나씩 비교하며 진행됨.
+    for i in range:
+        i+=1
+else:
+    print(0)
