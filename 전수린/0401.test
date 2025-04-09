@@ -1,0 +1,79 @@
+#문제 번호: 27866
+S=input("문자열을 입력하시오: ")
+i=int(input("출력할 위치를 입력하시오: "))
+print(S[i-1])
+
+#문제 번호: #2743
+word=input("단어를 입력하시오: ")
+print(len(word))
+
+#문제 번호: 11654
+char=input("문자를 입력하시오: ")
+print(ord(char))
+
+#문제 번호: #2908
+A, B= input().split()
+a= A[2]+A[1]+A[0]
+b=B[2]+B[1]+B[0]
+
+a=int(a)
+b=int(b)
+
+if a>b:
+    print(a)
+
+else:
+    print(b)
+
+#문제 번호: #1330
+A, B= input().split()
+A=int(A)
+B=int(B)
+
+if A>B:
+    print(">")
+elif:
+    print("<")
+
+else:
+    print("==")
+
+#문제 번호: 9498
+score=input("점수를 입력하시오: ")
+score=int(score)
+
+if 90<=score<=100:
+    print("A")
+elif 80<=score<=89:
+    print("B")
+elif 70<=score<=79:
+    print("C")
+elif 60<=score<=69:
+    print("D")
+else:
+    print("F")
+#문제 번호: #2884
+time= input()
+a= time.split()
+
+H=int(a[0])
+M=int(a[1])
+
+M-=45
+
+if M<0:
+    M+=60
+    H-=1
+
+if H<0:
+    H=23
+
+print(H,M)
+
+#문제 번호: #10988
+word=input("단어를 입력하시오: ")
+
+if word==word[::-1]:
+    print(1)
+else: 
+    print(0)
