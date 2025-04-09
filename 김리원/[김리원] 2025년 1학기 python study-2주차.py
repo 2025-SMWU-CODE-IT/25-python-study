@@ -32,7 +32,7 @@ b = int(b)
 print(a/b)
 
 #문제 번호:10869 사칙연산
-aa, b = input("0과 10,000 사이의 숫자 두 개를 입력하세요").split()
+a, b = input("0과 10,000 사이의 숫자 두 개를 입력하세요").split()
 a = int(a)
 b = int(b)
 
