@@ -1,0 +1,76 @@
+# 3주차 과제
+
+# 문자열
+
+# 문제 번호: 27866 문자와 문자열
+S = input("영어 단어를 입력하세요.")
+i = int(input("몇 번째 글자를 출력할까요?"))
+print(S[i-1])
+
+# 문제 번호: 2743 단어 길이 재기
+word = input("알파벳으로만 이루어진 단어를 입력하세요.")
+print(len(word))
+
+# 문제 번호: 11654 아스키 코드
+askii = input("알파벳 소문자, 대문자, 숫자 0-9 중 하나를 입력하세요.")
+print(ord(askii))
+
+# 문제 번호: 2908 상수
+a = input("0이 포함되지 않고, 서로 같지 않은 세 자리 수를 입력하세요.")
+A = int(a[2]+a[1]+a[0])
+b = input("0이 포함되지 않고, 서로 같지 않은 세 자리 수를 입력하세요.")
+B = int(b[2]+b[1]+b[0])
+if A>B:
+    print(A)
+else:
+    print(B)
+
+ # 조건문
+
+ # 문제 번호: 1330 두 수 비교하기
+A, B = input("-10000과 10000 사이의 정수 A, B를 입력하세요.").split()
+A = int(A)
+B = int(B)
+
+if A > B:
+    print(">")
+elif A < B:
+    print("<")
+else:
+    print("==")
+
+# 문제 번호: 9498 시험 점수
+score = int(input("시험 점수를 입력하세요."))
+
+if 90 <= score <= 100:
+    print("A")
+elif 80 <= score <= 89:
+    print("B")
+elif 70 <= score <= 79:
+    print("C")
+elif 60 <= score <= 69:
+    print("D")
+else:
+    print("F")
+
+# 문제 번호: 2884 알람 시계
+Hour = int(input("시"))
+Minute = int(input("분"))
+
+if not Hour == 0:
+    if (Minute - 45) >= 0:
+        print(Hour, Minute - 45)
+    else:
+        print(Hour - 1, Minute + 15)
+else:
+    if (Minute - 45) >= 0:
+        print(Hour, Minute - 45)
+    else:
+        print("23", Minute + 15)
+
+# 문제 번호: 10988 팰린드롬인지 확인하기
+word = input("단어를 입력하세요.")
+if word == word[::-1]:
+    print(1)
+else:
+    print(0)
