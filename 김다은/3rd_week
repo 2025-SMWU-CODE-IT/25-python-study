@@ -1,0 +1,126 @@
+#3주차 과제
+
+#문제번호:27866
+print("단어를 입력하세요")
+a = input()
+
+print("정수를 입력하세요")
+num = int(input())
+
+print(a[num-1])
+
+
+#문제번호:2743
+print("단어를 입력하세요")
+word = input()
+print(len(word))
+
+
+#문제번호:11654
+word = input("입력하세요")
+print(ord(word))
+
+
+
+#문제번호:2908
+print("두 수 A와 B를 입력하세요.")
+p = input().split()
+A = p[0]
+B = p[1]
+number1 = ""
+number2 = ""
+for i in A:
+    number1 = i + number1
+
+for i in B:
+    number2 = i + number2
+
+if int(number1)>int(number2):
+    print(int(number1))
+else:
+    print(int(number2))
+
+
+#문제번호:1330
+print("A와 B를 입력하세요.")
+word = input()
+A_B = word.split()
+
+A = int(A_B[0])
+B = int(A_B[1])
+
+if A>B:
+    print(">")
+
+elif A<B:
+    print("<")
+
+else:
+    print("==")
+
+
+#문제번호:9498
+print("시험 점수를 입력하세요")
+score = int(input())
+
+if 90<=score<=100:
+    print("A")
+
+if 80<=score<=89:
+    print("B")
+
+if 70<=score<=79:
+    print("C")
+
+if 60<=score<=69:
+    print("D")
+
+if score<60:
+    print("F")
+
+
+
+#문제번호:2884
+print("H와 M을 입력하세요.")
+time = input()
+t = time.split()
+hour = int(t[0])
+minute = int(t[1])
+
+minute_2 = minute-45
+
+if minute_2 >=0:
+    if hour < 0:
+        hour2 = hour + 24
+        print(hour2 , " " , minute_2)
+
+    else:
+        print(hour , " " , minute_2)
+
+else:
+    if (hour-1) < 0:
+        hour3 = hour - 1 + 24
+        print(hour3 , " " , (minute_2 + 60))
+
+    else:
+        print((hour-1) , " " , (minute_2 + 60))
+
+
+
+
+#문제번호:10988
+print("단어를 입력하세요.")
+word = str(input())
+word_list = list(word)
+
+if word_list == word_list.reverse():
+    print("1")
+
+else:
+    print("0")
+
+
+
+
+
+
