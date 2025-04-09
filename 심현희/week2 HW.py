@@ -1,10 +1,14 @@
 #문제번호 : 2557 Hello World
 print("Hello World!")
 #문제번호 : 1000 A+B
-a,b = map(int,input('0과10사이의 숫자를 두 개 입력하세요 :').split())
+#a,b = input('0과10사이의 숫자를 두 개 입력하세요 :').split()
+a = int(input())
+b = int(input())
 print(a+b)
 #문제번호 : 1001 A-B
-a,b = map(int,input('0과10사이의 숫자를 두 개 입력하세요 :').split())
+a,b = input('0과10사이의 숫자를 두 개 입력하세요 :').split()
+a = int(a)
+b = int(b)
 print(a-b)
 #문제번호 : 10998 AxB
 a,b = map(int,input('0과10사이의 숫자를 두 개 입력하세요 :').split())
