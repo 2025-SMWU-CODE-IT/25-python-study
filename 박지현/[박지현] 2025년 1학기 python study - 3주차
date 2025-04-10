@@ -1,0 +1,67 @@
+#27866
+s = input()
+i = int(input())
+print(s[i-1])
+
+#2743
+a = input()
+print(len(a))
+
+#11654
+b= input()
+print(ord(b))
+
+#2908
+a = input()  
+b = input()  
+
+j = ''.join(reversed(a))  
+h = ''.join(reversed(b))  
+
+j = int(j)
+h = int(h)
+
+if j > h:
+    print(j)
+else:
+    print(h)
+
+#1330
+a,b = input().split()
+a = int(a)
+b = int(b)
+if a>b:
+    print('>')
+elif a<b:
+    print('<')
+else:
+    print('==')
+
+#9498
+a = int(input())
+if 100>=a>=90:
+    print('A')
+elif 89>=a>=80:
+    print('B')
+elif 70>=a>=79:
+    print('C')
+elif 69>=a>=60:
+    print('D')
+else:
+    print('F')
+
+#2884
+h,m = input().split()
+j = int(h)*60+int(m)-45
+k = j//60
+l = j%60
+print(k,l)
+
+#10988
+a = input()
+j = ''.join(reversed(a))
+
+if a==j:
+    print(1)
+else:
+    print(0)
