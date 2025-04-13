@@ -27,3 +27,13 @@ N = int(input())
 
 for i in range(1, N+1):
     print("{0:>{1}}".format("*"*i, N)) 
+
+#10807
+n = int(input())
+N = [int(n) for n in input().split()]
+v = int(input())
+
+print(N.count(v))
+
+#2562
+N = [int(n) for n in input().split()]
