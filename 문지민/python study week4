@@ -1,0 +1,45 @@
+# 4주차 과제
+
+# 문제 번호: 2739 구구단
+N = int(input('')) # 몇 댠을 출력할 지 입력
+
+for i in range(1,10): 
+    print(N, "*", i, "=", N*i)
+
+# 문제 번호: 25304 영수증
+X = int(input('')) # 영수증에 적힌 총 금액 입력
+N = int(input('')) # 영수증에 적힌 구매한 물건의 종류의 수 입력
+c = 0
+
+for i in range(1,N+1): # 물건의 가격과 개수를 N번 만큼 입력
+    a, b = input('').split() # 물건의 가격과 개수 입력
+    a = int(a)
+    b = int(b)
+    c += a*b 
+
+if c == X: # 모든 물건의 가격을 합친 것과 총 가격이 같다면
+    print('Yes') # yes 출력
+else:
+    print('No') # 아니라면 no 출력
+
+# 문제 번호: 2439 별 찍기 - 2
+N = int(input('')) # 몇 줄을 출력할건지 입력
+
+for i in range(1, N+1): # N줄을 출력하도록 range 이용
+    print("{0:>{1}}".format("*"*i, N)) # 우측정렬
+# 0:> 다음에 N을 사용할 수 없어서 {1} 사용
+
+# 문제 번호: 10807 개수 세기
+N = int(input('')) # 정수의 개수 입력
+number = [int(n) for n in input().split()] 
+# 정수의 리스트 입력받기
+v = int(input('')) # 찾으려고 하는 정수 입력
+print(number.count(v)) # 리스트에서 v가 몇 개 있는지 출력
+
+# 문제 번호: 2562 최댓값
+A = list() # 빈 리스트
+for _ in range(9): # 9번 반복 실행
+    A.append(int(input())) # 리스트에 정수 추가 9번 반복
+
+print(max(A)) # 리스트에서 가장 큰 정수 출력
+print(A.index(max(A))+1) # 리스트에서 가장 큰 정수의 인덱스 출력력
