@@ -1,9 +1,4 @@
-H, M = input().split()
-H = int(H)
-M = int(M)
-if M < 45:
-    H = (H - 1) % 24
-    M += 15
-else:
-    M -= 45
-print(H, M)
+N = int(input())
+
+for i in range(1, N+1):
+    print("{0:>{1}}".format("*"*i, N))
