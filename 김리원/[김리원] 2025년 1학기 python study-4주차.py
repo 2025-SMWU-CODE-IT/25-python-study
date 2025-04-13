@@ -1,17 +1,19 @@
 #2739 구구단 
-
-number = int(input("1과 9사이 숫자를 입력하세요"))
+#1과 9사이 숫자를 입력받음.
+number = int(input())
 
 for i in range(10):
     print("%d * %d =%d"%(number, i, number*i))
 
 #25304 영수증 
-total = int(input("영수증 총 가격을 입력하세요"))
-total_count = int(input("구매하신 물품의 종류 개수를 입력하세요"))
+#영수증 총가격을 입력받음 
+total = int(input())
+#물품의 종류 개수를 입력받음.
+total_count = int(input())
 total_c = 0
 
 for i in range(total_count):
-    a, b = input("가격과 개수를 입력하세요").split(" ")
+    a, b = input().split(" ")
     a = int(a)
     b = int(b)
 
@@ -29,9 +31,10 @@ for i in range(number+1):
 
 
 #10807 개수 세기 
-total = int(input("총 정수의 개수를 입력하세요>> "))
-list_number = list(input("정수를 입력하세요").split(" ", total+1))
-find_number = int(input("찾으시려는 숫자를 입력하세요"))
+#정수의 개수를 입력받음.
+total = int(input())
+list_number = list(input().split(" ", total+1))
+find_number = int(input())
 count = 0
 
 for i in range(total):
@@ -42,7 +45,7 @@ print(count)
 #2562 최댓값
 number = []
 for i in range(9): 
-    number.append(int(input("숫자 입력>>")))
+    number.append(int(input()))
 print(number)
 
 max_number = max(number)
