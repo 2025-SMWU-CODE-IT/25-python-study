@@ -3,7 +3,6 @@
 
 #2739
 N = int(input())
-i = 1
 
 for i in range(1, 10):
     print("{0} * {1} = {2}".format(N, i, N*i))
@@ -36,4 +35,12 @@ v = int(input())
 print(N.count(v))
 
 #2562
-N = [int(n) for n in input().split()]
+number = []
+for i in range(9):
+    x = input()
+    number.append(int(x))
+
+max = max(number)
+
+print(max)
+print(number.index(max)+1)
