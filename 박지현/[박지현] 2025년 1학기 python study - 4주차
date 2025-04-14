@@ -1,0 +1,37 @@
+#2739
+n = int(input("숫자를 입력해 주세요:"))
+
+for i in range(1,10):
+    print(n, '*', i, '=', n*i)
+
+#25304   
+a = int(input("총 금액을 입력해 주세요"))
+b = int(input("구매한 물건 종류의 수를 입력해 주세요"))
+e = 0
+for i in range(b):
+    c,d = [int(n) for n in input("구매한 물건의 가격과 수량을 입력해 주세요").split()]
+    e = e + c*d
+
+if a==e:
+    print("Yes")
+else:
+    print("No")
+
+#2439
+N = int(input("숫자를 입력해 주세요:"))
+a = "*"
+for i in range(1,N+1):
+    print(str(a*i).rjust(N))
+
+#10807
+N = int(input("정수의 개수 N을 입력해 주세요:"))
+X = [int(n) for n in input("N개의 정수를 입력해주세요:").split()]
+a = int(input("찾으려는 정수를 입력해 주세요:"))
+print(X.count(a),"개")
+
+#2562
+for i in range(9):
+    a = [int(n) for n in input("자연수를 입력해 주세요: ").split()]
+print(max(a))
+print(a.index(max(a)) + 1)
+
