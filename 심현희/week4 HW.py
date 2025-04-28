@@ -37,16 +37,11 @@ find_num = int(input("찾으려는 정수를 입력하세요: "))
 print(wjdtn.count(find_num)) #리스트에서 해당 인덱스의 수를 세기 위해 count함수를 사용한다.
 
 #2562 최댓값
-#한 줄에 하나씩 받으므로 9개의 변수를 설정하여 입력받고 이를 리스트로 만든다.
-one = int(input("첫번째 자연수를 입력하세요 : "))
-two = int(input("두번째 자연수를 입력하세요 : "))
-three = int(input("세번째 자연수를 입력하세요 : "))
-four = int(input("네번째 자연수를 입력하세요 : "))
-five = int(input("다섯번째 자연수를 입력하세요 : "))
-six = int(input("여섯번째 자연수를 입력하세요 : "))
-seven = int(input("일곱번째 자연수를 입력하세요 : "))
-eight = int(input("여덟번째 자연수를 입력하세요 : "))
-nine = int(input("아홉번째 자연수를 입력하세요 : "))
-chleo = [one,two,three,four,five,six,seven,eight,nine]
+#한 줄에 하나씩 받으므로 while문을 사용하여 입력받고 이를 리스트로 만든다.
+chleo = []
+i = 0
+while i < 9 :
+    chleo.extend([int(n) for n in input("자연수를 입력하세요.  : ").split()])
+    i = i + 1
 print(max(chleo)) #최댓값을 구해야 하므로 max함수를 사용한다.
 print(chleo.index(max(chleo)) + 1) #인덱스는 0부터 시작하므로 1을 더해준다.
