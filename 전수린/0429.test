@@ -1,0 +1,125 @@
+#문제번호: 5597
+
+#1부터 30까지 출석번호 집합
+submit=[0]*30
+
+#28명의 제출자 입력 받기기
+#입력받은 번호 n이 과제를 냈기 때문에 submit[n-1]=1로 표시한다.
+for _ in range(28):
+    n=int(input())
+    submit[n-1]=1
+
+#제출하지 않은 학생 찾기
+#submit[i]==0이면 그 학생은 과제를 안냈다는 뜻이다. 
+#안 낸 학생 번호는 i+1로 계산해서 missing 리스트에 넣는다.
+
+missing=[]
+for i in range(30):
+    if submit[i]==0:
+        missing.append(i+1)
+
+#작은 번호부터 출력 (2명 출력)
+missing.sort()  #과제를 안 낸 두명을 오름차순으로 정렬한다.
+print(missing[0])
+print(missing[1])
+
+#문제 번호: 1546
+
+#과목의 개수와 점수를 입력받는다.
+subject=int(input())
+scores=list(map(int, input().split()))
+
+#최고점 찾기
+max_score=max(scores)
+
+#점수 조작
+new_scores=[(score/max_score)*100 for score in scores]
+
+#평균 출력
+average=sum(new_scores)/subject
+print(average)
+
+#문제 번호: 2444
+
+N=int(input())
+
+#위쪽 삼각형 (1~N번째 줄)
+for i in range(N):
+    spaces=' '*(N-1-i)
+    stars='*'*(2*i+1)
+    print(spaces+stars)
+
+#아래쪽 삼각형(N+1~2N-1번째 줄)
+for i in range(N-2,-1,-1):
+    spaces=' '*(N-1-i)
+    stars='*'*(2*i+1)
+    print(spaces+stars)
+
+#문제 번호: 2501
+
+#N,K 입력받기기
+N, K=map(int,input().split())
+
+count=0 #약수를 몇 개 찾았는지 세는 변수
+
+#N의 약수 구하기기
+for i in range(1,N+1):
+    if N%i==0:
+        count+=1
+        if count==K:
+            print(i)
+            break
+
+#약수가 K개 보다 적은 경우
+if count<K:
+    print(0)
+
+#문제 번호: 10773
+
+K=int(input())  #정수 개수 입력
+numbers=[]         #수를 저장할 리스트트
+
+for _ in range(K):
+    num=int(input())
+    if num==0:
+        numbers.pop()   #최근 수 제거
+
+    else:
+        numbers.append(num)  #수 추가
+        
+print(sum(numbers))
+
+
+#문제 번호: 17256
+
+class cakenumber:
+    def__init__(self,x,y,z):
+        self.x=x
+        self.y=y
+        self.z=z
+
+    #케이크 연산 정의의
+    def operate(self,other):
+        new_x=self.z+other.x
+        new_y=self.y*other.y
+        new_z=self.x+other.z
+
+    #케이크 수 출력용용
+    def__str__(self):
+        return f"{self.x}{self.y}{self.z}"
+
+#입력력
+a_x,a_y,a_z=map(int,input().split())
+c_x,c_y,c_z=map(int,input().split())
+
+#역으로 b 구하기기
+a=cakenumber(a_x,a_y,a_z)
+c=cakenumber(c_x,c_y,c_z)
+
+b_x=c.x-a.z
+b_y=c.y//a.x
+b_z=c.z-a.x
+b=cakenumber(b_x,b_y,b_z)
+
+#결과 출력력
+print(b)
