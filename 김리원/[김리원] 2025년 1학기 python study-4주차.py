@@ -2,8 +2,8 @@
 #1과 9사이 숫자를 입력받음.
 number = int(input())
 
-for i in range(10):
-    print("%d * %d =%d"%(number, i, number*i))
+for i in range(1,10):
+    print(number,"*", i, "=", number*i)
 
 #25304 영수증 
 #영수증 총가격을 입력받음 
@@ -25,7 +25,7 @@ else:
     print("No")
 
 #2439 별 찍기 
-number = int(input("숫자 입력>> "))
+number = int(input())
 for i in range(number+1): 
     print(" "*(number-i)+"*"*i)
 
@@ -50,5 +50,6 @@ print(number)
 
 max_number = max(number)
 max_index = number.index(max(number))
+
 print(max_number)
 print(max_index+1)
