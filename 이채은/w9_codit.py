@@ -73,7 +73,7 @@ cx, cy, cz = [int(n) for n in input().split()]
 #객체로 선언
 a = Cake(ax, ay, az)
 c = Cake(cx, cy, cz)
-#b를 계산
+#b를 계산함
 bx = cx - az
 by = cy // ay
 bz = cz - ax
