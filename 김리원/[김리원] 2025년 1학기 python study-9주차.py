@@ -83,14 +83,28 @@ print(total)
 
 
 #17256 달달함이 흘러넘쳐
+
+#class 생성 
+class Service:
+    def cal_m(self, num, A, C):
+        return int(C[num])-int(A[2-num])
+    def cal_d(self, num, A, C):
+        return int(C[num])//int(A[2-num])
+
 #숫자 입력
 A = input().split(' ', 3)
 C = input().split(' ', 3)
 B = [0,0,0]
 
-#b의 각 요소 계산
-B[0] = int(C[0])-int(A[2])
-B[1] = int(C[1])//int(A[1])
-B[2] = int(C[2])-int(A[0])
+#클래스 활용하여 숫자 계산
+for i in range(3): 
+
+    s = Service()
+
+    if i == 1: 
+        B[i]= s.cal_d(i, A, C)
+
+    B[i]= s.cal_m(i,A,C)
+
 #출력
 print(B[0], B[1], B[2])
