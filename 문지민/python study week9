@@ -1,0 +1,89 @@
+#9주차 과제
+
+# 문제 번호: 5597 과제 안 내신 분..?
+chulsuk = [] 
+for i in range(1,31): # 1번부터 30까지 리스트에 추가
+    chulsuk.append(i)
+
+for _ in range(28):
+    student = int(input()) # 과제 제출한 28명 입력 받기 
+    chulsuk.remove(student) # 1~30번이 있는 리스트에서 과제 제출한 28명 제거 
+
+print(min(chulsuk)) # 과제 제출 안 한 학생 중 가장 작은 출석 번호 출력 
+print(max(chulsuk)) # 과제 제출 안 한 학생 중 가장 큰 출석 번호 출력 
+
+# 문제 번호: 1546 평균
+N = int(input()) # 시험 본 과목의 개수 입력 받기 
+grade = [] 
+for _ in range(N): 
+    grade.append(int(input())) # N번 성적 입력
+
+M = max(grade) #리스트에서 가장 큰 점수를 M에 저장
+
+Hap = 0 # Hap이라는 변수 생성 
+
+for i in range(N):
+    each = grade[i]/M*100 # 리스트의 점수들을 새로 계산하고 each에 저장  
+    Hap += each # Hap에 계속 더하기 
+
+print(Hap/N) # Hap을 과목 개수로 나누어서 새로운 평균 구해 출력 
+
+# 문제 번호: 2444 별 찍기-7
+N = int(input()) # 중간 줄 N 입력
+
+for i in range(1, N + 1): # 중간 줄 포함 위 삼각형 
+    star = "*" * (2 * i - 1) # 1부터 N줄까지 홀수 개의 별 
+    W = " " * (N - i)
+    print(W + star) # 공백+별 출력 
+    
+for i in range(N - 1, 0, -1): # 아래 삼각형
+    star = "*" * (2 * i - 1) # N+1부터 2N-1까지 홀수 개의 별
+    W = " " * (N - i)
+    print(W + star) # 공백+별 출력
+
+# 문제 번호: 2501 약수 구하기
+N, K = input().split() # 약수 구할 수 N과 K번째 약수의 K를 입력 받기 
+N = int(N)
+K = int(K)
+
+yaksoo = []
+
+for i in range(1, N + 1):
+    if N % i == 0: # N을 1부터 N으로 나누어서 나머지가 0이면 
+        yaksoo.append(i) # 리스트에 추가
+
+x = len(yaksoo) # 리스트의 요소 개수를 x라는 변수에 저장 
+if K <= x: # K가 x보다 작거나 같으면
+    print(yaksoo[K-1]) # 약수 중 K번째 수 출력 
+else:
+    print(0) # K가 x보다 크면 0 출력 
+
+# 문제 번호: 10773 제로
+K = int(input()) # 몇 개의 수를 입력할 지 입력 
+numbers = []
+
+for _ in range(K):
+    num =int(input()) # K번 수 입력력
+    if num == 0: # 입력 받은 수가 0이라면
+        numbers.pop() # 리스트의 가장 최근 요소 삭제
+    else: # 입력 받은 수가 0이 아니라면 
+        numbers.append(num) # 리스트에 추가
+
+print(sum(numbers)) # 리스트의 모든 수를 더해서 출력 
+
+# 문문제 번호: 17256 달달함이 넘쳐흘러
+a_x, a_y, a_z = input().split() # 케이크 수 a 입력 받기
+c_x, c_y, c_z = input().split() # 케이크 수 c 입력 받기 
+
+a_x = int(a_x)
+a_y = int(a_y)
+a_z = int(a_z)
+c_x = int(c_x)
+c_y = int(c_y)
+c_z = int(c_z)
+# 케이크 수 a,c가 주어졌을 때 케이크 수 b 구하기
+b_x = c_x - a_z
+b_y = c_y // a_y
+b_z = c_z - a_x
+
+print(b_x, b_y, b_z)
