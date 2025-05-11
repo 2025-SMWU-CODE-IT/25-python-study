@@ -71,19 +71,23 @@ for _ in range(K):
 
 print(sum(numbers)) # 리스트의 모든 수를 더해서 출력 
 
-# 문문제 번호: 17256 달달함이 넘쳐흘러
-a_x, a_y, a_z = input().split() # 케이크 수 a 입력 받기
-c_x, c_y, c_z = input().split() # 케이크 수 c 입력 받기 
-
-a_x = int(a_x)
-a_y = int(a_y)
-a_z = int(a_z)
-c_x = int(c_x)
-c_y = int(c_y)
-c_z = int(c_z)
-# 케이크 수 a,c가 주어졌을 때 케이크 수 b 구하기
-b_x = c_x - a_z
-b_y = c_y // a_y
-b_z = c_z - a_x
+# 문제 번호: 17256 달달함이 넘쳐흘러
 
 print(b_x, b_y, b_z)
+class cake: # cake 수 class 생성
+    def __init__(self, x, y, z):
+        self.x = x
+        self.y = y
+        self.z = z
+
+ax, ay, az = [int(n) for n in input().split()] # 케이크 수 a 객체 생성
+cx, cy, cz = [int(n) for n in input().split()] # 케이크 수 c 객체 생성 
+
+a = cake(ax, ay, az)
+c = cake(cx, cy, cz)
+
+bx = cx - az # 케이크 수 a,c가 주어졌을 때 케이크 수 b 구하기
+by = cy // ay
+bz = cz - ax
+
+print(bx, by, bz)
