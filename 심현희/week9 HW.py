@@ -66,3 +66,19 @@ for w in range(q) :
     sum = sum + writelist[w]
 print(sum)
 #17256 달달함이넘쳐흘러
+a,b,c = input().split()
+d,e,f = input().split()
+a = int(a)
+b = int(b)
+c = int(c)
+d = int(d)
+e = int(e)
+f = int(f)
+class Cake:
+    def cakeplus(self, a, b, c, d, e, f) : # 각 연산에 맞는 값을 지정해준다.
+        b1 = d - c
+        b2 = e // b
+        b3 = f - a
+        print(b1,b2,b3)
+test = Cake() #클래스Cake의 인스턴스로 test를 만든다.
+test.cakeplus(a,b,c,d,e,f) #클래스Cake의 인스턴스이므로 클래스 내 함수를 호출할 수 있다.
