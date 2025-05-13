@@ -73,18 +73,16 @@ total = sum(nums)# 남아있는 숫자들의 합
 print(total)# 최종합합
 
 #17256, 달달함이 넘쳐흘러
-
 class CakeNumber:
-    def init(self, x, y, z):
+    def __init__(self, x, y, z):
         self.x = x
         self.y = y
         self.z = z
 
-    def str(self):
+    def __str__(self):
         return f"{self.x} {self.y} {self.z}"
 
     def calculate_b(self, a, c):
-        # a (케이크) b = c에서 b를 구하기 위한 수식들
         b_x = c.x - a.z 
         b_y = c.y // a.y 
         b_z = c.z - a.x 
@@ -94,14 +92,15 @@ class CakeNumber:
 a_x, a_y, a_z = [int(n) for n in input().split()]
 c_x, c_y, c_z = [int(n) for n in input().split()]
 
-# CakeNumber 객체 생성
+# CakeNumber 생성
 a = CakeNumber(a_x, a_y, a_z)
 c = CakeNumber(c_x, c_y, c_z)
 
 # b 계산
 b = a.calculate_b(a, c)
 
-# 결과 출력
 print(b)
+
+
 
 
