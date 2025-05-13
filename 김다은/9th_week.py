@@ -106,7 +106,7 @@ a = [int(n) for n in input().split()]
 c = [int(n) for n in input().split()]
 
 # 케이크 수의 특이한 연산을 이용하여 a와 c를 통해 b를 구함. 
-b = [c[0]-a[2], c[2]/a[1], c[3]-a[0]]
+b = [c[0]-a[2], c[1]/a[1], c[2]-a[0]]
 
 # 케이크 수 b를 구성하는 자연수들을 하나의 공백을 사이에 두고 차례대로 출력함.
 for i in b:
