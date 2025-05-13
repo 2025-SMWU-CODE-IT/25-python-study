@@ -1,10 +1,9 @@
 #5597 과제 안 내신 분..?
 a = [int(n) for n in range(1,31)]#1부터 30까지 학생 출석부 생성
-#과제를 제출 한 학생 번호 받고, 그 번호가 출석부에 있다면 지움
+#과제를 제출 한 학생 번호 받고, 그 번호를 지움
 for i in range(28):
     b = int(input())
-    if b in a:
-        a.remove(b)
+    a.remove(b)
 #과제를 제출하지 않은 번호만 출석부에 남았으므로 출력함
 print(a[0])
 print(a[1])
