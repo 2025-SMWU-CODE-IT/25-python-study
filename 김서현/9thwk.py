@@ -12,6 +12,14 @@ for i in range(1,31): #0번이 없기 때문에 1,31로 범위를 뒀다.
 print(nonnums.list[0]) #리스트의 처음 숫자를 출력했다.
 print(nonnums.list[1]) #리스트의 그 다음 숫자를 출력했다.
 
+#간단하게 수정한 코드 
+nums = [i for i in range(1,31)]
+for i in range(28):
+    x = int(input())
+    nums.remove(x)
+print(min(nums)) #리스트의 min을 출력으로 바꿈
+print(max(nums)) #리스트의 max를 출력으로 바꿈
+
 #1546번 평균
 #평균 점수 조작하기
 
@@ -107,3 +115,29 @@ if b_x < 1 or b_y < 1 or b_z < 1 or c.y % a.y != 0: #조건에 따라 케이크 
 else:
     b = cakenumber(b_x, b_y, b_z)
     print(b) #모든 조건이 맞을 때 b를 출력한다. 
+
+#17256 고친 거
+
+class cake:
+    x = 0
+    y = 0
+    z = 0
+
+    def cakexyz(self): #self를 사용하여 정의를 내려준다. 
+        nums = input().split()
+        self.x = int(nums[0])
+        self.y = int(nums[1])
+        self.z = int(nums[2])
+
+a = cake()
+b = cake()
+c = cake()
+
+a.cakexyz()
+c.cakexyz()
+
+b.x = c.x - a.z
+b.y = c.y // a.y
+b.z = c.z - a.x
+
+print(b.x, b.y, b.z)
