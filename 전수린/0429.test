@@ -1,27 +1,23 @@
 #문제번호: 5597
 
-#1부터 30까지 출석번호 집합
-submit=[0]*30
+#제출한 학생 번호를 저장할 집합
+submit=set()
 
-#28명의 제출자 입력 받기기
-#입력받은 번호 n이 과제를 냈기 때문에 submit[n-1]=1로 표시한다.
+#28명의 제출자 번호 입력 받기
 for _ in range(28):
     n=int(input())
-    submit[n-1]=1
+    submit.add(n)
 
-#제출하지 않은 학생 찾기
-#submit[i]==0이면 그 학생은 과제를 안냈다는 뜻이다. 
-#안 낸 학생 번호는 i+1로 계산해서 missing 리스트에 넣는다.
+#전체 학생 번호 집합
+all_students=set(range(1,31))
 
-missing=[]
-for i in range(30):
-    if submit[i]==0:
-        missing.append(i+1)
+#제출하지 않은 학생 번호 집합
+missing=sorted(all_students-submit)
 
-#작은 번호부터 출력 (2명 출력)
-missing.sort()  #과제를 안 낸 두명을 오름차순으로 정렬한다.
+#결과 출력
 print(missing[0])
 print(missing[1])
+
 
 #문제 번호: 1546
 
@@ -92,8 +88,8 @@ print(sum(numbers))
 
 #문제 번호: 17256
 
-class cakenumber:
-    def__init__(self,x,y,z):
+class CakeNumber:
+    def __init__(self,x,y,z):
         self.x=x
         self.y=y
         self.z=z
@@ -103,23 +99,27 @@ class cakenumber:
         new_x=self.z+other.x
         new_y=self.y*other.y
         new_z=self.x+other.z
+        return CakeNumber(new_x,new_y,new_z)
 
-    #케이크 수 출력용용
-    def__str__(self):
-        return f"{self.x}{self.y}{self.z}"
+    def find_b(self,c):
+        b_x=c.x-self.z
+        b_y=c.y//self.y
+        b_z=c.z-self.x
+        return CakeNumber(b_x,b_y,b_z)
+
+    def __str__(self):
+        return f"{self.x} {self.y} {self.z}"
+
 
 #입력력
 a_x,a_y,a_z=map(int,input().split())
 c_x,c_y,c_z=map(int,input().split())
 
 #역으로 b 구하기기
-a=cakenumber(a_x,a_y,a_z)
-c=cakenumber(c_x,c_y,c_z)
+a=CakeNumber(a_x,a_y,a_z)
+c=CakeNumber(c_x,c_y,c_z)
 
-b_x=c.x-a.z
-b_y=c.y//a.x
-b_z=c.z-a.x
-b=cakenumber(b_x,b_y,b_z)
+b=a.find_b(c)
 
 #결과 출력력
 print(b)
