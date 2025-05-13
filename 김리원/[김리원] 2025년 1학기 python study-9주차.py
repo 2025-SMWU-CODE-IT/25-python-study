@@ -108,3 +108,4 @@ for i in range(3):
 
 #출력
 print(B[0], B[1], B[2])
+
