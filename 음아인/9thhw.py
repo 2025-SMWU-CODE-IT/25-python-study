@@ -3,18 +3,18 @@
 student = list(range(1,31))
 #제출한 학생 수가 28명이므로 28명의 번호를 입력받게 합니다.
 for i in range (28):
-    n = int(input("제출한 사람의 출석번호를 입력"))
+    n = int(input())
     #제출한 28명을 리스트에서 제외하도록 합니다.
     student.remove(n)
 student.sort() #제출하지 않은 사람들의 번호를 오름차순으로 정리합니다.
-print("제출 안 한 사람 학생의 번호를 써주세요")
+
 print(student[0])
 print(student[1])
 
 #문제1546(평균)
 #시험 본 과목의 개수를 입력합니다
-n = int(input("과목 개수 입력"))
-score_input = input("과목의 점수를 입력")
+n = int(input())
+score_input = input()
 score_list = score_input.split() #입력받은 과목의 점수를 띄어쓰기를 기준으로 리스트로 구분해줍니다.
 scores = [] 
 for i in score_list:
@@ -27,18 +27,18 @@ average = total / n #과목들의 평균을 계산해줍니다.
 print(average)
 
 #문제2444(별찍기)
-n = int(input("숫자를 입력해주세요"))
+n = int(input())
 #위에 그려진 별
 #for 문을 사용해서 공백과 별을 이용해서 위에 있는 별을 표현해줍니다.
-for i in range(1, n+1):
-    print(" " * (n-1) + "*" * (2 * i -1))
+for i in range(1, n + 1):
+    print(" " * (n - i) + "*" * (2 * i - 1))
 #아래쪽에 그려진 별
 #위와 마찬가지로 for문을 사용해서 공백과 별을 이용해서 아래에 있는 별을 표현해줍니다.
-for i in range(n-1, 0, -1):
-    print(" " * (n-1) + "*" * (2 * i-1))
+for i in range(n - 1, 0, -1):
+    print(" " * (n - i) + "*" * (2 * i - 1))
 
 #문제2501(약수구하기)
-n, k= input("숫자를 입력하세요").split() #입력된 숫자를 구분해줍니다
+n, k= input().split() #입력된 숫자를 구분해줍니다
 #n과 k를 정수형으로 받아줍니다.
 n = int(n)
 k = int(k)
@@ -56,7 +56,7 @@ if measure < k: #약수가 k보다 작으면 0을 출력해줍니다.
     print(0)
 
 #문제10773(제로)
-k = int(input("수를 입력하세요"))
+k = int(input())
 number = [] #빈 리스트를 만들어줍니다.
 index = 0 #인덱스를 0으로 초기에 설정해줍니다. 
 for i in range(k): #k번만큼 반복하도록 for문을 만들어줍니다.
@@ -80,12 +80,12 @@ class cake: #클래스 생성
         self.x = x #각각 입력받은 수를 x,y,z에 저장합니다.
         self.y = y
         self.z = z
-a_input = input("a의 x y z를 입력하세요")
+a_input = input()
 a_split = a_input.split() #입력받으면 공백으로 수를 나눕니다. 
 ax = int(a_split[0]) #입력받은 수를 정수로 변환하고 저장해줍니다.
 ay = int(a_split[1])
 az = int(a_split[2])
-c_input = input("c의 x y z를 입력하세요: ") #a와 마찬가지로 c도 해줍니다. 
+c_input = input() #a와 마찬가지로 c도 해줍니다. 
 c_split = c_input.split()
 cx = int(c_split[0])
 cy = int(c_split[1])
