@@ -1,0 +1,34 @@
+#5597
+y_student=[]
+n_student=[]
+for i in range(28):
+    s=int(input())
+    y_student.append(s)
+for i in range(1,31):
+    if i not in y_student:
+        n_student.append(i)
+print(min(n_student))
+print(max(n_student))
+
+#1546
+num = int(input())
+score = [int(n) for n in input().split()]
+high = max(score)
+sum = sum(score)
+print(sum * 100 / score / num)
+
+#2444
+n = int(input())
+for i in range(1,n+1):
+    print(" "*(n-i) + "*"*(2*i-1))
+for i in range(n+1,2*n):
+    print(" "*(n-i) + "*"*(2*i-1))
+
+#2501
+n , s = int(input()).split
+m = []
+for i in range(1, n+1) :
+    if n % i == 0 :
+        m.append(i)
+print(m[s-1])
+
