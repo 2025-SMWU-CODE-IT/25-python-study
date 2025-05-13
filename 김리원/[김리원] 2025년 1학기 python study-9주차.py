@@ -14,6 +14,7 @@ print(number[0])
 print(number[1])
 
 
+
 #1546 평균 
 #점수와 과목 수 입력
 Count= int(input())
