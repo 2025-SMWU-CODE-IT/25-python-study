@@ -14,9 +14,7 @@ print(max(chulsuk)) # 과제 제출 안 한 학생 중 가장 큰 출석 번호 
 
 # 문제 번호: 1546 평균
 N = int(input()) # 시험 본 과목의 개수 입력 받기 
-grade = [] 
-for _ in range(N): 
-    grade.append(int(input())) # N번 성적 입력
+grade = [int(n) for n in input().split()] # N번 성적 입력
 
 M = max(grade) #리스트에서 가장 큰 점수를 M에 저장
 
@@ -63,7 +61,7 @@ K = int(input()) # 몇 개의 수를 입력할 지 입력
 numbers = []
 
 for _ in range(K):
-    num =int(input()) # K번 수 입력력
+    num = int(input()) # K번 수 입력
     if num == 0: # 입력 받은 수가 0이라면
         numbers.pop() # 리스트의 가장 최근 요소 삭제
     else: # 입력 받은 수가 0이 아니라면 
@@ -72,8 +70,6 @@ for _ in range(K):
 print(sum(numbers)) # 리스트의 모든 수를 더해서 출력 
 
 # 문제 번호: 17256 달달함이 넘쳐흘러
-
-print(b_x, b_y, b_z)
 class cake: # cake 수 class 생성
     def __init__(self, x, y, z):
         self.x = x
