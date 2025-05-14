@@ -75,7 +75,7 @@ def shull(s):#함수 정의
     for k in range(s):
         d = int(a[k][1])
         c.append(d)
-    e = c.index(max(c))
+    e = c.index(max(c))#가장 큰 수의 인덱스 확인 
     print(a[e][0])#학교 출력 
 
 T = int(input())
