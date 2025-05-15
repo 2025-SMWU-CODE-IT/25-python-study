@@ -1,0 +1,54 @@
+#5597
+y_student=[]
+n_student=[]
+for i in range(28):
+    s=int(input())
+    y_student.append(s)
+for i in range(1,31):
+    if i not in y_student:
+        n_student.append(i)
+print(min(n_student))
+print(max(n_student))
+
+#1546
+num = int(input())
+score = [int(n) for n in input().split()]
+high = max(score)
+sum = sum(score)
+print(sum * 100 / high / num)
+
+#2444
+n = int(input())
+for i in range(1,n+1):
+    print(" "*(n-i) + "*"*(2*i-1))
+for i in range(n-1, 0, -1):
+    print(" "*(n-i) + "*"*(2*i-1))
+
+#2501
+n,s = input().split()
+n = int(n)
+s = int(s)
+m = []
+for i in range(1, n+1) :
+    if n % i == 0 :
+        m.append(i)
+print(m[s-1])
+
+#10773
+a = int(input())
+money = []
+for i in range(a):
+    j = int(input())
+    if j == 0:
+        money.pop()
+    else:
+        money.append(j)
+print(sum(money))
+
+#17256
+a = [int(n) for n in input().split()]
+c = [int(n) for n in input().split()]
+bx = c[0] - a[2]
+by = c[1] // a[1]
+bz = c[2] - a[0]
+print(bx, by, bz)
