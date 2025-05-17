@@ -61,34 +61,36 @@ H += Dsec % 24
 if H >= 24:
     H -= 24
 
-print(H,M,S)
+print(H,M,S) #초가 몇 분인지에 따라 시,분,초를 조정한다. 마지막에 시 분 초를 프린트한다. 
 
 
 #2480 주사위 세개 
+#주사위 눈에 따라 숫자 출력하기 
 
-a, b, c = input().split()
+a, b, c = input().split() #3번 던졌을 때 눈을 출력하기 위해서 a,b,c를 설정한다. 
 A= int(a)
 B = int(b)
 C =int(c)
 
-if A == B == C:
+if A == B == C: #모두 같을 때의 출력이다.
     print(10000+A*1000)
-elif A == B:
+elif A == B: #C가 다를 때의 출력이다.
     print(1000+A*100)
-elif A == C:
+elif A == C: #B가 다를 때의 출력이다.
     print(1000+A*100)
-elif B == C:
+elif B == C: #A가 다를 때의 출력이다. 
     print(1000+B*100)
-else:
+else: #다 다를 때의 출력이다. 
     print(100 * max(A,B,C))
 
 
 #7567 그릇
+#그릇 방향에 따라 그릇 길이 측정하는 코드다. 
 
-plate = list(str(input())) #이거 물어보기 하나부터 하면 걍 인풋해서 리스트 위치 비교하는 듯
-sum = 0
+plate = list(str(input())) #접시에 대해 리스트를 설정한다. 
+sum = 0 #sum을 두고 길이를 더하는 곳을 만든다.
 
-for i in range(len(plate)):
+for i in range(len(plate)): #조건에 따라 접시 길이를 더한다. 
     if i == 0:
         sum += 10
     elif plate[i] == plate[i-1]:
@@ -96,18 +98,19 @@ for i in range(len(plate)):
     else:
         sum += 10
 
-print(sum)
+print(sum) #합을 더한 것을 출력한다.
 
 #11557 Yangjojang of The Year 
+#누가 술 많이 마셨는지 구하는 프로그램.
 
-T = int(input())
+T = int(input()) #입력 
 for i in range(T):
-    school = []
+    school = [] #리스트를 만들어 각 학교와 음주량에 대해 계산을 한다.
     booze = []
     N = int(input())
     for _ in range(N):
         a, b =input().split()
         school.append(a)
         booze.append(int(b))
-    M = booze.index(max(booze))
+    M = booze.index(max(booze)) #가장 많이 마신 학교, 음주량 출력 
     print(school[M])
