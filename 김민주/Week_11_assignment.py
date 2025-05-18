@@ -55,3 +55,59 @@ B = (T - A * 3600) // 60
 C = T - A*3600 - B*60
 
 print(A, B, C)
+
+#2480, 주사위 세개
+a, b, c = [int(n) for n in input().split()]
+
+if a == b == c:
+    reward = 10000 + a * 1000
+elif a == b or a == c:
+    reward = 1000 + a * 100
+elif b == c:
+    reward = 1000 + b * 100
+else:
+    max = a #가장 큰 값 확인
+    if b > max:
+        max = b
+    if c > max:
+        max = c
+    reward = max * 100
+
+print(reward)
+
+#7567, 그릇
+
+# 입력 받기
+brackets = input()
+
+# 첫 번째 그릇은 항상 10cm
+height = 10
+
+# 두 번째 그릇부터 비교하면서 높이 계산
+for i in range(1, len(brackets)):
+    if brackets[i] == brackets[i - 1]:
+        height += 5
+    else:
+        height += 10
+
+print(height)
+
+#11557 Yangjojang of The Year
+T = int(input())
+
+for _ in range(T):
+    N = int(input())  # 학교 수
+
+    max_school = ""
+    max_drink = -1 
+
+    for _ in range(N):
+        entry = input().split()
+        name = entry[0]
+        drink = int(entry[1])
+
+        if drink > max_drink:
+            max_drink = drink
+            max_school = name
+
+    print(max_school)
