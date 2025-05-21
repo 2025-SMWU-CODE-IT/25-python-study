@@ -46,9 +46,20 @@ for i in range(a):
 print(sum(money))
 
 #17256
-a = [int(n) for n in input().split()]
-c = [int(n) for n in input().split()]
-bx = c[0] - a[2]
-by = c[1] // a[1]
-bz = c[2] - a[0]
+class macaroon:
+    def __init__(self, a, c):
+        self.a = a
+        self.c = c
+
+    def cake(self):
+        bx = self.c[0] - self.a[2]
+        by = self.c[1] // self.a[1]
+        bz = self.c[2] - self.a[0]
+        return bx, by, bz
+
+a = list(map(int, input().split()))
+c = list(map(int, input().split()))
+
+mac = macaroon(a, c)
+bx, by, bz = mac.cake()
 print(bx, by, bz)
