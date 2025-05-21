@@ -72,7 +72,7 @@ for i in range(T): #케이스의 수만큼 반복한다.
         school, alcohol = input().split()
         alcohol = int(alcohol)
         schol_dic[alcohol] = school #술 소비량으로 학교를 알 수 있도록 술 소비량을 key로, 학교를 value로 지정하여 딕셔너리에 추가한다.
-        alco_list.append(alcohol) #술 소비량을 딕셔너리에 추가한다.
+        alco_list.append(alcohol) #술 소비량을 리스트에 추가한다.
     print(schol_dic[max(alco_list)]) #술 소비량 리스트의 최댓값의 key의 value를 출력한다.
     
         
