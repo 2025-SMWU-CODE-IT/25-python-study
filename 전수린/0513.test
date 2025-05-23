@@ -1,0 +1,132 @@
+#문제 번호: #9610
+
+#점의 개수 입력력
+n=int(input())
+
+#각 사분면과 축 위의 점 개수를 저장할 변수들 초기화화
+q1=q2=q3=q4=axis=0
+
+#n개의 좌표를 입력 받음음
+for _ in range(n):
+    x,y=map(int,input().split()) #x,y 좌표 입력력
+
+    #x 또는 y가 0이면 좌표축 위에 있는 점점
+    if x==0 or y==0:
+        axis+=1
+
+    #제1사분면면
+    elif x>0 and y>0:
+        q1+=1
+
+    #제2사분면면
+    elif x<0 and y>0:
+        q2+=1
+    
+    #제3사분면면
+    elif x<0 and y<0:
+        q3+=1
+
+    #제4사분면면
+    elif x>0 and y<0:
+        q4+=1
+
+#사분면 별로 결과 출력력
+print(f"Q1: {q1}")
+print(f"Q2: {q2}")
+print(f"Q3: {q3}")
+print(f"Q4: {q4}")
+print(f"AXIS: {axis}") #축 위에 위치한 점 개수 출력
+
+#문제 번호: #2163
+
+N,M=map(int,input().split())
+
+result=N*M-1
+
+print(result)
+
+#문제 번호: #2530
+
+#현재 시각 입력
+A,B,C=map(int,input().split())
+#요리 시간 입력 (초 단위)
+D=int(input())
+
+#현재 시간을 초로 변환환
+current_seconds=A*3600+B*60+C
+
+#요리 시간이 끝나는 총 시간 (초 단위)
+end_seconds=current_seconds+D
+
+#24시간 기준으로 나머지 처리리
+end_seconds%=24*3600
+
+#다시 시, 분, 초로 환산
+end_hour=end_seconds//3600
+end_min=(end_seconds%3600)//60
+end_sec=end_seconds%60
+
+#결과 출력
+print(end_hour, end_min, end_sec)
+
+#문제 번호: #2480
+
+A,B,C=map(int, input().split())
+
+#같은 눈이 3개인 경우우
+if A==B==C:
+    print(10000+A*1000)
+
+#A가 다른 하나와만 같을 경우 (2개만 같음)
+elif A==B or A==C:
+    print(1000+A*100)
+
+#B와 C가 같을 경우우
+elif B==C:
+    print(1000+B*100)
+
+#모두 다를 경우
+else:
+    print(max(A,B,C)*100)
+
+#문제 번호: #7567
+
+#괄호 문자열 입력력
+plates=input().strip()
+
+#초기 높이
+height=10
+
+#2번째 그릇부터 비교교
+for i in range(1,len(plates)):
+    if plates[i]==plates[i-1]:
+        height+=5  #같은 방향이면 5cm씩 증가
+
+    else:
+        height+=10  #다른 방향이면 10cm 증가
+
+print(height)
+
+#문제번호: #11557
+
+#테스트 케이스의 수 입력 받기기
+T=int(input())
+
+#T개의 테스트 케이스를 반복처리리
+for _ in range(T): 
+    #학교 수 입력력
+    N=int(input())
+    #가장 많이 술을 소비한 학교를 저장할 변수 초기화화
+    max_school=" " #소비량이 가장 많은 학교 이름름
+    max_drink=-1 #최대 소비량 초기값 (비교용)
+
+    for _ in range(N):
+        S,L=input().split() #학교 이름:S, 소비량:L
+        L=int(L) #L은 문자열로 들어오므로 정수형으로 변환환
+
+        #현재 학교의 소비량이 지금까지의 최대보다 크면 업데이트트
+        if L> max_drink:
+            max_drink=L
+            max_school=S
+
+    print(max_school)
