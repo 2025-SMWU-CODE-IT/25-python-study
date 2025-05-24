@@ -11,24 +11,16 @@ for i in range(1, num+1):
     # 좌표값을 리스트에 저장
     coor = [int(n) for n in input().split()]
 
-    if coor[0] > 0:
-        if coor[1] > 0:
-            Q1 += 1
-        elif coor[1] == 0:
-            axis += 1
-        else:
-            Q4 += 1
-
-    elif coor[0] == 0:
-        axis += 1
-
+    if coor[0] > 0 and coor[1] > 0:
+        Q1 += 1
+    elif coor[0] < 0 and coor[1] > 0:
+        Q2 += 1
+    elif coor[0] < 0 and coor[1] < 0:
+        Q3 += 1
+    elif coor[0] > 0 and coor[1] < 0:
+        Q4 += 1
     else:
-        if coor[1] > 0:
-            Q2 += 1
-        elif coor[1] == 0:
-            axis += 1
-        else:
-            Q3 += 1
+        axis += 1
 
 print("Q1: ", Q1)
 print("Q2: ", Q2)
@@ -56,27 +48,22 @@ B = time[1]
 C = time[2]
 D = int(input())
 
-min = D//60
-sec = D % 60
+C += D % 60
+D = D // 60
+if C >= 60:
+    C -= 60
+    B += 1
 
-if C + sec > 60:
-    C = 0
+B += D % 60
+D = D // 60
+if B >= 60:
+    B -= 60
+    A += 1
 
-    # 초에서 분으로 넘어옴.
-    B = B + min + (C + sec - 60)
-    if B > 60:
-        # 분에서 시로 넘어옴.
-        A = A + (B - 60)
-        B = 0
-        
+A += D % 24
+if A >= 24:
+    A -= 24
 
-else:
-    C = C+sec
-    if B + min > 60:
-        # 분에서 시로 넘어옴.
-        A = A + (B + min - 60)
-        B = 0
-        
 print(A, B, C)
 
 
@@ -126,11 +113,11 @@ print(height)
 
 
 # 문제번호:11557
-T = int(input("테스트 케이스 숫자"))
+T = int(input("테스트 케이스 숫자 : "))
 
 # 테스트케이스별로 구하기
 for i in range(1, T+1):
-    N = int(input("학교의 숫자")) 
+    N = int(input("학교의 숫자 : ")) 
     maxAmount = 0
     maxUniv = ""
     for n in range(1, N+1) :
