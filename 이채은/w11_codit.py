@@ -28,11 +28,16 @@ print('Q4:',Q4)
 print('AXIS:',AXIS)
 
 #2163 초콜릿 자르기
-N, M = [int(n) for n in input().split()]#입력받음
+N, M = input().split()#입력받음
+N = int(N)
+M = int(M)
 print(N*M-1)#결과값들의 규칙을 이해한 후 출력
 
 #2530 인공지능 시계
-A, B, C = [int(n) for n in input().split()]
+A, B, C = input().split()
+A = int(A)
+B = int(B)
+C = int(C)
 D = int(input())
 n = A*3600 + B*60 + C + D#입력받은 시간을 몽땅 초로 바꿈
 A = n // 3600 % 24#시간으로 바꿈 #24의 나머지로 하여 24시간이 넘어가는 것도 처리
