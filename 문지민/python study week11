@@ -39,6 +39,35 @@ print("Q3:",Q3)
 print("Q4:",Q4)
 print("AXIS:",AXIS)
 
+# 다른 방법
+n = int(input()) 
+
+Q1 = Q2 = Q3 = Q4 = AXIS = 0
+
+for _ in range(n): 
+    x, y = input().split()
+    x = int(x)
+    y = int(y)
+
+    if x > 0 and y > 0:
+        Q1 += 1  
+    elif x < 0 and y > 0:
+        Q2 += 1  
+    elif x < 0 and y < 0:
+        Q3 += 1 
+    elif x > 0 and y < 0:
+        Q4 += 1  
+    else:
+        AXIS += 1
+
+print("Q1:",Q1)
+print("Q2:",Q2)
+print("Q3:",Q3)
+print("Q4:",Q4)
+print("AXIS:",AXIS)
+
+
+
 # 문제 번호: 2163 초콜릿 자르기
 N, M = input().split() # 초콜릿 크기 입력 받기 
 N = int(N)
