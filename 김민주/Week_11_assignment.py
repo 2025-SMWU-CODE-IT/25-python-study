@@ -10,7 +10,9 @@ Q4 = 0
 n = int(input())
 
 for i in range(n):
-   x, y = [int(n) for n in input().split()]
+   x_str, y_str = input().split()
+   x = int(x_str)
+   y = int(y_str)
    
    if x > 0 and y > 0:
       Q1 = Q1 + 1
@@ -31,7 +33,9 @@ print("AXIS:", AXIS)
 
 
 #2163, 초콜릿 자르기
-N, M = [int(n) for n in input().split()]
+N_str, M_str = input().split()
+N = int(N_str)
+M = int(M_str)
 
 result = (N-1) + (M-1)*N
 print(result)
@@ -39,7 +43,10 @@ print(result)
 #2530, 인공지능 시계
 
 #시A, 분B, 초C, 요리시간D
-A, B, C = [int(n) for n in input().split()]
+A_str, B_str, C_str = input().split()
+A = int(A_str)
+B = int(B_str)
+C = int(C_str)
 D = int(input())
 
 #모두 초(s)로 변환
@@ -49,7 +56,6 @@ T = A * 3600 + B * 60 + C + D
 if T >= 86400:
    T = T - 86400*(T//86400)
 
-
 A = T // 3600
 B = (T - A * 3600) // 60
 C = T - A*3600 - B*60
@@ -57,7 +63,10 @@ C = T - A*3600 - B*60
 print(A, B, C)
 
 #2480, 주사위 세개
-a, b, c = [int(n) for n in input().split()]
+a_str, b_str, c_str = input().split()
+a = int(a_str)
+b = int(b_str)
+c = int(c_str)
 
 if a == b == c:
     reward = 10000 + a * 1000
@@ -102,9 +111,8 @@ for _ in range(T):
     max_drink = -1 
 
     for _ in range(N):
-        entry = input().split()
-        name = entry[0]
-        drink = int(entry[1])
+        name, drink_str = input().split()
+        drink = int(drink_str)
 
         if drink > max_drink:
             max_drink = drink
