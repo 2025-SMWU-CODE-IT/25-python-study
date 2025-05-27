@@ -1,0 +1,125 @@
+#문제번호: #13909
+
+#사용자 입력받기
+N=int(input())
+
+#제곱근 계산을 위한 초기값 설정정
+i=1 #제곱할 숫자자
+count=0 #열려있는 창문의 개수수
+
+#i*i가 N보다 작거나 같을 때까지 반복복
+while i*i<=N:
+    count+=1 #제곱수 하나 발견 -> 창문 하나 열림림
+    i+=1 #다음 숫자로 넘어감감
+
+#최종적으로 열려 있는 창문의 수 출력력
+print(count)
+
+#문제번호: 7785
+
+#출입 로그 개수 입력 받기기
+n=int(input())
+
+#현재 회사에 있는 사람들을 저장할 집합합
+office=set()
+
+#출입 로그 처리리
+for _ in range(n):
+    name, action=input().split() 
+    if action=="enter":
+        office.add(name) #출근: 집합에 추가가
+
+    else:
+        office.discard(name) #퇴근: 집합에서 제거거
+
+for name in sorted(office, reverse=True):
+    print(name)
+
+#문제번호: #1269
+
+#첫 줄에서 두 집합의 원소 개수를 입력 받음
+a_count, b_count=input().split()
+a_count=int(a_count)
+b_count=int(b_count)
+
+#둘째 줄: 집합 A의 원소들을 정수로 받아 set으로 저장
+a_input= input().split()
+A=set()
+for i in range(a_count):
+    A.add(int(a_input[i]))
+
+#셋째줄: 집합 B의 원소들을 정수로 받아 set으로 저장장
+b_input=input().split()
+B=set()
+for i in range(b_count):
+    B.add(int(b_input[i]))
+
+#A-B와 B-A를 따로 구함함
+only_in_A=A-B
+only_in_B=B-A
+
+#두 차집합을 합쳐서 전체 개수 계산산
+symmetric_diff=only_in_A.union(only_in_B)
+
+#정답 출력
+print(len(symmetric_diff))
+
+#문제번호: #27433
+
+#정수 N 입력 받기기
+N=int(input())
+
+#결과를 저장할 변수
+result=1
+
+#1부터 N까지 곱하기기
+for i in range(1, N+1):
+    result*=i
+
+#결과출력력
+print(result)
+
+#문제번호: #2559
+
+#첫줄 입력: 날짜 수 N과 구간길이 K
+N,K=map(int, input().split())
+
+#둘째 줄 입력: 온도 리스트트
+temps=list(map(int, input().split()))
+
+#처음 K일의 합을 초기값으로 설정정
+current_sum=sum(temps[:K])
+max_sum=current_sum
+
+#앞에서 하나 빼고 뒤에서 하나 더하는 방식식
+for i in range(K,N):
+    current_sum=current_sum-temps[i-K]+temps[i]
+    if current_sum>max_sum:
+        max_sum=current_sum
+
+#결과 출력력
+print(max_sum)
+
+#문제번호: #20920
+
+#단어 개수 N, 기준 길이 M 입력 받기기
+N,M=map(int,input().split())
+
+#단어 등장 횟수를 저장할 딕셔너리 생성성
+word_count={}
+
+#N개의 단어를 입력 받음음
+for _ in range(N):
+    word=input()
+    if len(word)>=M: #길이가 M 이상인 단어만 저장장
+        #딕셔너리에 단어가 없으면 0으로 시작해서 1 증가가
+        word_count[word]=word_count.get(word,0)+1
+
+#정렬: 등장 횟수 많음 -> 길이 길ㄹ음 -> 알파벳 빠름름
+words=sorted(word_count, key=lambda x: (-word_count[x], -len(x),x))
+
+#정렬된 단어 출력력
+for word in words:
+    print(word)
+
+
