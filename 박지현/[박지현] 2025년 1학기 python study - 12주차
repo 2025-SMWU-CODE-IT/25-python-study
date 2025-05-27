@@ -2,10 +2,11 @@
 people = int(input())
 window = []
 
+# 1번째 사람람
 for i in range(people):
     window.append(1)
 
-
+# 2번째 사람 ~ 마지막 사람
 for k in range(people):
     for i in range(k+1,people,k+2):
         if window[i] == 1:
@@ -18,13 +19,17 @@ print(window.count(1))
 
 #7785
 number = int(input())
+#딕셔너리 생성, 키값: 직원, 벨류값: 상태
 people = {}
 for i in range(number):
     a,b = input().split()
     people[a] = b
 
+#현재 상태가 enter인 사람만 리스트 생성성
 working = [key for key, value in people.items() if value == "enter"]
+#사전 순의 역순으로 정렬
 workingpeople = sorted(working, reverse = True)
+
 for i in range(len(workingpeople)):
     print(workingpeople[i])
 
@@ -33,6 +38,7 @@ for i in range(len(workingpeople)):
 a,b = input().split()
 A = [int(n) for n in input().split()]
 B = [int(n) for n in input().split()]
+#대칭 차집합
 sym_diff = list(set(A) ^ set(B))
 print(len(sym_diff))
 
@@ -48,7 +54,9 @@ print(a)
 a,b = map(int, input().split())
 temperature = [int(n) for n in input().split()]
 d = []
+#연속된 합이 나오는 경우의 수 동안
 for i in range(a-b+1):
+    #b일간의 온도합
     c = sum(temperature[i:i + b]) 
     d.append(c)
 print(max(d))
@@ -57,15 +65,20 @@ print(max(d))
 a,b = map(int, input().split())
 d = []
 e = {}
+#영어 단어 리스트로 생성
 for i in range(a):
     c = input()
     d.append(c)
+#키값이 영어 단어이고 벨류값이 단어의 빈도인 딕셔너리 생성성
 for i in d:
     e[i] = d.count(i)
 
+#중복된 단어를 제외한 리스트 생성
 f = list(e.keys())
+#짧은 단어를 제거한 딕셔너리 생성
 filtered = {key: value for key, value in e.items() if value >= b}
 
+#정렬: 등장 횟수 내림차순 → 길이 내림차순 → 알파벳 오름차순
 sorted_words = sorted(filtered.items(), key=lambda x: (-x[1], -len(x[0]), x[0]))
 
 for word, count in sorted_words:
